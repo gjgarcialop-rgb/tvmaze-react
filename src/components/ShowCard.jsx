@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { removeHTML, formatDate } from '../script.js'
 import CastList from './CastList.jsx'
 
+//this function allows us to display detailed information about a TV show.
+// This component displays the show's image, summary, premiere date, last updated date, genres, rating, and cast.
 function ShowCard({ show }) {
     const [cast, setCast] = useState([])
 

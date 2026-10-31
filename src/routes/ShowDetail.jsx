@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { removeHTML, formatDate } from '../script.js'
 
+
+// this function also displays detailed information about a TV show,
+// including its image, summary, premiere date, status, genres, rating, last updated date, network or web channel, and cast.
 function ShowDetail() {
     const { id } = useParams()
     const [show, setShow] = useState(null)

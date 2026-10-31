@@ -1,3 +1,5 @@
+//this function displays the main cast of a TV show.
+// It takes a `cast` prop, which is an array of cast members, and renders them in a list.
 function CastList({ cast }) {
     return (
         <div>
