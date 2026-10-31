@@ -13,12 +13,12 @@ function ShowCard({ show }) {
                     `https://api.tvmaze.com/shows/${show.id}/cast`
                 )
 
-                if (!response.ok) {
+                if (response.ok) {
                     const data = await response.json()
                     setCast(data.slice(0,5))
                 }
-            } catch(error){
-                console.log('Unable to load cast')
+            } catch {
+                setCast([])
             }
         }
         getCast()
@@ -29,7 +29,7 @@ function ShowCard({ show }) {
                 <img src={show.image.medium} alt={show.name} />
             )}
             <h2>
-                <Link to={`/shows/${show.id}`}>{show.name}</Link>
+                <Link to={`/show/${show.id}`}>{show.name}</Link>
             </h2>
 
             <p> {removeHTML(show.summary)} </p>

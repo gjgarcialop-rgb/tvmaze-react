@@ -68,7 +68,6 @@ function Gallery() {
             Search term : {query} | Results: {shows.length}
         </p>
         
-        // display loading, error, or no results messages
         {loading && <p>Loading...</p>}
         {error && <p>{error}</p>}
         {!loading && !error && shows.length === 0 &&(
